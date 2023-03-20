@@ -5,17 +5,11 @@ function mergeSort(x) {
   else {
     const half = Math.ceil(x.length / 2);
     let temp = mergeSort(x.slice(0, half))
-    console.log("is it here")
-    console.log(temp)
     let temp2 = mergeSort(x.slice(half));
-    console.log("or here")
-    console.log(temp2)
     let placeHolder = []
 
     while (temp.length != 0 || temp2.length != 0) {
 
-      console.log(temp[0])
-      console.log(temp2[0])
       if (temp[0] < temp2[0]) {
         placeHolder.push(temp.shift())
         if (temp == 0 && temp2.length != 0) {
@@ -36,4 +30,4 @@ function mergeSort(x) {
   }
 }
 
-console.log(mergeSort([4, 2, 1, 9, 7]))
+console.log(mergeSort([50, 31, 21, 28, 72, 41, 73, 93, 68, 43, 45, 78, 5, 17, 97, 71, 69, 61, 88, 75, 99, 44, 55, 9]))
